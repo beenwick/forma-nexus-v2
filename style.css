@@ -36,7 +36,7 @@ h1, h2, h3 {
 }
 
 .container {
-  max-width: 960px;
+  max-width: 1200px;
   margin: auto;
   padding: 2rem;
 }
@@ -256,12 +256,19 @@ header.scrolled {
 }
 
 .navbar {
-  max-width: 960px;
+  position: fixed;              /* fixa no topo */
+  top: 0;                       /* encosta no topo */
+  width: 100%;                  /* ocupa toda a largura */
+  max-width: 960px;             /* limite central */
   margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: transparent;
+  padding: 1.2rem 2rem;         /* espaço interno */
+  z-index: 999;                 /* garante que fique acima de tudo */
 }
+
 
 .logo {
   font-family: 'Playfair Display', serif;
@@ -954,4 +961,13 @@ footer a {
   background-attachment: fixed;
   background-position: center;
   z-index: 0;
+}
+.contato-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 100px 2rem 5rem; /* ou 11rem se preferir */
+  gap: 3rem;
 }

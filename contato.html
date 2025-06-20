@@ -2,60 +2,140 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contato | Forma Nexus</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url('https://res.cloudinary.com/dxjq122xi/image/upload/v1750364110/ChatGPT_Image_19_06_2025_17_14_18_bg41ss.png') repeat center center fixed;
+      color: #f5f5f5;
+    }
+    header {
+      display: flex;
+      justify-content: flex-end;
+      padding: 1.5rem 2rem;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contato-info {
+      flex: 1;
+    }
+    .contato-info h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: #e0c078;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .contato-info h1 img {
+      height: 48px;
+    }
+    .contato-info p.subtitulo {
+      font-size: 1.1rem;
+      color: #e0c078;
+      margin: 0.5rem 0 3rem;
+    }
+    .contato-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .contato-links a {
+      text-decoration: none;
+      color: #e0c078;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .contato-links i {
+      font-size: 1.3rem;
+    }
+    .contato-imagem {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+    .contato-imagem img {
+      max-width: 300px;
+      border-radius: 20px;
+      border: 2px solid #e0c078;
+      box-shadow: 0 0 20px rgba(255,255,255,0.08);
+    }
+    @media (max-width: 768px) {
+      .contato-container {
+        flex-direction: column;
+        text-align: center;
+      }
+      .contato-info h1 {
+        justify-content: center;
+      }
+    }
+  </style>
 </head>
 <body>
-
-  <header>
+<header>
+  <div class="container">
     <nav class="navbar">
-      <a href="../index.html" class="logo"></a>
+      <a href="index.html" class="logo"></a>
       <ul class="nav-links">
-        <li><a href="../index.html#inicio">Início</a></li>
+        <li><a href="index.html#inicio">Início</a></li>
         <li class="dropdown">
-          <a href="#">Portfólio ▼</a>
+          <a href="index.html#portfolio">Portfólio ▼</a>
           <ul class="dropdown-menu">
-            <li><a href="sites.html">Sites</a></li>
-            <li><a href="feeds.html">Feeds do Instagram</a></li>
-            <li><a href="postagens.html">Pacotes de Postagens</a></li>
-            <li><a href="roteiros.html">Roteiros e Vídeos</a></li>
-            <li><a href="textos.html">Textos para Blogs e Sites</a></li>
-            <li><a href="identidades.html">Identidades Visuais</a></li>
+            <li><a href="./portfolio/sites.html">Sites</a></li>
+            <li><a href="./portfolio/feeds.html">Feeds do Instagram</a></li>
+            <li><a href="./portfolio/postagens.html">Pacotes de Postagens</a></li>
+            <li><a href="./portfolio/roteiros.html">Roteiros Tik Tok</a></li>
+            <li><a href="./portfolio/textos.html">Textos para Blogs e Sites</a></li>
+            <li><a href="./portfolio/identidades.html">Identidades Visuais</a></li>
           </ul>
         </li>
-        <li><a href="../servicos.html">Serviços</a></li>
-        <li><a href="../contato.html">Contato</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="contato.html">Contato</a></li>
       </ul>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <main>
-    <section class="container container-pagina contato-pagina">
-      <div class="imagem-com-veu">
-        <img src="https://res.cloudinary.com/dxjq122xi/image/upload/v1750386722/ChatGPT_Image_19_de_jun._de_2025_23_31_50_cewkwg.png" alt="Retrato de Jefter" />
-        <div class="veu"></div>
+
+  <section class="contato-container">
+    <div class="contato-info">
+      <h1>
+<img src="https://res.cloudinary.com/dxjq122xi/image/upload/v1750436587/oie_HldV3xKsjRDf_bairnl.png" alt="pena de pavão" style="height: 364px; width: auto;" />        Contato
+      </h1>
+      <p class="subtitulo">A essência é a imensidão do céu</p>
+
+      <div class="contato-links">
+        <a href="https://wa.me/5511939014504" target="_blank">
+          <i class="fa fa-phone"></i> WhatsApp: +55 11 93901-4504
+        </a>
+        <a href="mailto:forma.nexus@icloud.com">
+          <i class="fa fa-envelope"></i> E-mail: forma.nexus@icloud.com
+        </a>
+        <a href="https://instagram.com/aformanexus" target="_blank">
+          <i class="fa fa-instagram"></i> Instagram: @aformanexus
+        </a>
       </div>
-      <div class="coluna-direita">
-        <h1 style="color: #e0c078;">Quem fala é o Jefter <span>👋</span></h1>
-        <p>Nerd de T.I. por convivência, artista por vocação. Tenho 29 anos, um pezinho na academia e outro no mundo das ideias. A Forma Nexus nasceu da mistura entre códigos, criatividade e intuição — com uma pitada de sarcasmo quando necessário.</p>
-        <p>Crio sites, identidades visuais e conteúdos que não só têm cara bonita, mas alma também. Aqui, cada projeto é único porque cada pessoa é única. Bora transformar tua essência em algo visual que represente de verdade quem você é?</p>
+    </div>
 
-        <div class="info-contato">
-          <p>📞 <strong style="color: #e0c078;">WhatsApp:</strong> <a href="https://wa.me/5511939014504" target="_blank" style="color: #e0c078;">Falar comigo</a></p>
-          <p>📧 <strong style="color: #e0c078;">E-mail:</strong> <a href="mailto:aformanexus@icloud.com" style="color: #e0c078;">aformanexus@icloud.com</a></p>
-          <p>🌐 <strong style="color: #e0c078;">Instagram:</strong> <a href="https://instagram.com/aformanexus" target="_blank" style="color: #e0c078;">@aformanexus</a></p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; Forma Nexus — 2025</p>
-    <a href="https://instagram.com/aformanexus" target="_blank">Instagram</a>
-  </footer>
-
-  <script src="../script.js"></script>
+    <div class="contato-imagem">
+      <img src="https://res-console.cloudinary.com/dxjq122xi/thumbnails/v1/image/upload/v1750386722/Q2hhdEdQVF9JbWFnZV8xOV9kZV9qdW4uX2RlXzIwMjVfMjNfMzFfNTBfY2V3a3dn/drilldown" alt="Jefter" />
+    </div>
+  </section>
 </body>
 </html>
