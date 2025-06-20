@@ -1,4 +1,3 @@
-<!-- index.html atualizado -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -9,77 +8,160 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+<!-- Analisando e igualando a estrutura entre index.html e contato.html -->
+
+<!-- PASSO 1: Garanta que o header e a navbar estejam exatamente assim em TODAS as páginas -->
 <header>
   <div class="navbar-container">
     <nav class="navbar">
-      <a href="index.html" class="logo"></a>
+      <a href="index.html" class="logo">🪐</a>
+      
       <ul class="nav-links">
-        <li><a href="index.html#inicio">Início</a></li>
-        <li class="dropdown">
-          <a href="index.html#portfolio">Portfólio ▼</a>
-          <ul class="dropdown-menu" style="display: none;">
-            <li><a href="./portfolio/sites.html">Sites</a></li>
-            <li><a href="./portfolio/feeds.html">Feeds do Instagram</a></li>
-            <li><a href="./portfolio/postagens.html">Pacotes de Postagens</a></li>
-            <li><a href="./portfolio/roteiros.html">Roteiros Tik Tok</a></li>
-            <li><a href="./portfolio/textos.html">Textos para Blogs e Sites</a></li>
-            <li><a href="./portfolio/identidades.html">Identidades Visuais</a></li>
-          </ul>
-        </li>
-        <li><a href="servicos.html">Serviços</a></li>
-        <li><a href="contato.html">Contato</a></li>
-      </ul>
+  <li><a href="index.html#inicio">Início</a></li>
+  <li class="dropdown">
+    <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Portfólio ▼</a>
+    <ul class="dropdown-menu">
+      <li><a href="./portfolio/sites.html">Sites</a></li>
+      <li><a href="./portfolio/feeds.html">Feeds do Instagram</a></li>
+      <li><a href="./portfolio/postagens.html">Pacotes de Postagens</a></li>
+      <li><a href="./portfolio/roteiros.html">Roteiros Tik Tok</a></li>
+      <li><a href="./portfolio/textos.html">Textos para Blogs e Sites</a></li>
+      <li><a href="./portfolio/identidades.html">Identidades Visuais</a></li>
+    </ul>
+  </li>
+  <li><a href="servicos.html">Serviços</a></li>
+  <li><a href="contato.html">Contato</a></li>
+</ul>
+
     </nav>
   </div>
 </header>
 
 
+
+
+<!-- PASSO 2: Use o mesmo padding-top para os conteúdos principais -->
+<!-- EXEMPLO PARA INDEX -->
+<section class="hero" id="inicio">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <!-- conteúdo -->
+  </div>
+</section>
+
+<!-- PASSO 3: Certifique-se de que a navbar esteja fixa -->
+
 <!-- Hero Section -->
 <section class="hero" id="inicio">
   <div class="overlay"></div>
-  <div class="hero-content" style="padding-top: 120px;">
+  <div class="hero-content" style="padding-top: 100px;"> 
     <img src="https://res.cloudinary.com/dxjq122xi/image/upload/v1750374865/35d35afe-1cd6-461a-ad4b-d67e166e8b43_o46vyk.png" alt="Logo FN" class="logo-fn" />
     <h1>a estética é a forma visível da alma</h1>
+    <!-- Frase removida como solicitado -->
     <a href="#portfolio" class="btn-cta">Conheça meu trabalho</a>
-    <!-- Resto do conteúdo -->
+
+
+<div class="mockup-galeria">
+  <div class="linha linha-cima">
+    <div class="mockup ajustado esquerda">
+      <img src="https://res.cloudinary.com/dxjq122xi/image/upload/v1750380067/ChatGPT_Image_19_de_jun._de_2025_21_40_33_mzvc3k.png" alt="">
+    </div>
+    <div class="mockup ajustado direita">
+      <img src="https://res.cloudinary.com/dxjq122xi/image/upload/v1750379649/ChatGPT_Image_19_de_jun._de_2025_21_32_19_gzcl43.png" alt="">
+    </div>
+  </div>
+  <div class="linha linha-baixo">
+    <div class="mockup ajustado direita">
+      <img src="https://res.cloudinary.com/dxjq122xi/image/upload/v1750383626/ChatGPT_Image_19_de_jun._de_2025_22_40_18_kgjjkn.png" alt="">
+    </div>
+    <div class="mockup ajustado esquerda">
+      <img src="https://res.cloudinary.com/dxjq122xi/image/upload/v1750379661/ChatGPT_Image_19_de_jun._de_2025_21_34_12_accecd.png" alt="">
+    </div>
+  </div>
+</div>
+
   </div>
 </section>
-</body>
-</html>
-
-<!-- contato.html atualizado -->
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contato - Forma Nexus</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
 
 
-<section class="contato-container" style="padding-top: 120px;">
-  <div class="contato-info">
-    <h1>
-      <img src="https://res.cloudinary.com/dxjq122xi/image/upload/v1750436082/Q2hhdEdQVF9JbWFnZV8yMF9kZV9qdW4uX2RlXzIwMjVfMTNfMTRfMjNfZXlwMGFl/drilldown" alt="pena de pavão" style="height: 30px; vertical-align: middle;"/>
-      Contato
-    </h1>
-    <p class="subtitulo">A essência é a imensidão do céu</p>
 
-    <div class="contato-links">
-      <a href="https://wa.me/5511939014504" target="_blank">
-        <i class="fa fa-phone"></i> WhatsApp: +55 11 93901-4504
-      </a>
-      <a href="mailto:forma.nexus@icloud.com">
-        <i class="fa fa-envelope"></i> E-mail: forma.nexus@icloud.com
-      </a>
-      <a href="https://instagram.com/aformanexus" target="_blank">
-        <i class="fa fa-instagram"></i> Instagram: @aformanexus
-      </a>
+  </div>
+</section>
+
+<!-- Portfólio -->
+<section class="portfolio" id="portfolio">
+  <div class="container">
+    <h2></h2>
+    <div class="grid">
+      <a href="./portfolio/sites.html">Sites</a>
+      <a href="./portfolio/feeds.html">Feeds do Instagram</a>
+      <a href="./portfolio/postagens.html">Pacotes de Postagens</a>
+      <a href="./portfolio/roteiros.html">Roteiros Tik Tok</a>
+      <a href="./portfolio/textos.html">Textos para Blogs e Sites</a>
+      <a href="./portfolio/identidades.html">Identidades Visuais</a>
     </div>
   </div>
 </section>
+
+<!-- Serviços -->
+<section class="servicos" id="servicos">
+  <div class="container teaser-servicos">
+    <h2 class="servico-poetico">Cada criação é única.</h2>
+    <p class="servico-frase">Mas se quiser saber o que posso fazer por você...</p>
+<a href="servicos.html" class="btn-cta transparente">Ver serviços</a>
+  </div>
+</section>
+
+
+<!-- Contato -->
+<section class="contato" id="contato">
+  <div class="container">
+    <h2>Contato</h2>
+    <p>Me conta seu projeto. Eu te devolvo em forma.</p>
+    <a href="https://wa.me/5511939014504" target="_blank" class="btn-cta">Falar no WhatsApp</a>
+    <p class="final">Nos vemos onde forma e alma se encontram.</p>
+  </div>
+</section>
+
+
+<footer>
+  <p>&copy; Forma Nexus — 2025</p>
+  <a href="https://instagram.com/aformanexus" target="_blank">Instagram</a>
+</footer>
+
+
+<script src="script.js"></script>
+
+<script>
+  const dropdown = document.querySelector('.dropdown');
+  let hideTimeout;
+
+  dropdown.addEventListener('mouseenter', () => {
+    clearTimeout(hideTimeout);
+    dropdown.classList.add('open');
+  });
+
+  dropdown.addEventListener('mouseleave', () => {
+    hideTimeout = setTimeout(() => {
+      dropdown.classList.remove('open');
+    }, 400); // tempo de espera para sumir (em milissegundos)
+  });
+
+  // Também garante clique abre/fecha normalmente
+  const toggle = dropdown.querySelector('.dropdown-toggle');
+  toggle.addEventListener('click', (e) => {
+    e.preventDefault(); // impede o clique de causar comportamento padrão
+    dropdown.classList.toggle('open');
+  });
+
+  // Fecha ao clicar fora
+  document.addEventListener('click', (e) => {
+    if (!dropdown.contains(e.target)) {
+      dropdown.classList.remove('open');
+    }
+  });
+</script>
+
 </body>
 </html>
+
