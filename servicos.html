@@ -3,132 +3,114 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FormaNexus</title>
+  <title>Serviços | Forma Nexus</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<!-- Analisando e igualando a estrutura entre index.html e contato.html -->
 
-<!-- PASSO 1: Garanta que o header e a navbar estejam exatamente assim em TODAS as páginas -->
 <header>
   <div class="navbar-container">
     <nav class="navbar">
       <a href="index.html" class="logo">🪐</a>
-      
       <ul class="nav-links">
-  <li><a href="index.html#inicio">Início</a></li>
-  <li class="dropdown">
-    <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Portfólio ▼</a>
-    <ul class="dropdown-menu">
-      <li><a href="./portfolio/sites.html">Sites</a></li>
-      <li><a href="./portfolio/feeds.html">Feeds do Instagram</a></li>
-      <li><a href="./portfolio/postagens.html">Pacotes de Postagens</a></li>
-      <li><a href="./portfolio/roteiros.html">Roteiros Tik Tok</a></li>
-      <li><a href="./portfolio/textos.html">Textos para Blogs e Sites</a></li>
-      <li><a href="./portfolio/identidades.html">Identidades Visuais</a></li>
-    </ul>
-  </li>
-  <li><a href="servicos.html">Serviços</a></li>
-  <li><a href="contato.html">Contato</a></li>
-</ul>
-
+        <li><a href="index.html#inicio">Início</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Portfólio ▼</a>
+          <ul class="dropdown-menu">
+            <li><a href="./portfolio/sites.html">Sites</a></li>
+            <li><a href="./portfolio/feeds.html">Feeds do Instagram</a></li><br>
+            <li><a href="./portfolio/postagens.html">Pacotes de Postagens</a></li>
+            <li><a href="./portfolio/roteiros.html">Roteiros Tik Tok</a></li>
+            <li><a href="./portfolio/textos.html">Textos para Blogs e Sites</a></li>
+            <li><a href="./portfolio/identidades.html">Identidades Visuais</a></li>
+          </ul>
+        </li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
     </nav>
   </div>
 </header>
 
-
-
-
-<!-- PASSO 2: Use o mesmo padding-top para os conteúdos principais -->
-<!-- EXEMPLO PARA INDEX -->
-<section class="hero" id="inicio">
-  <div class="overlay"></div>
-  <div class="hero-content">
-    <!-- conteúdo -->
-  </div>
+<section style="padding: 160px 20px 80px; text-align: center;">
+  <h1 style="font-family: 'Playfair Display', serif; font-size: 3rem; color: #c8b572;">Serviços que elevam sua presença</h1>
+  <p style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; color: var(--branco-leitoso); margin-top: 12px;">
+    Do digital ao espiritual, cada criação carrega propósito.
+  </p>
 </section>
 
-<!-- PASSO 3: Certifique-se de que a navbar esteja fixa -->
-
-<!-- Hero Section -->
-<section class="hero" id="inicio">
-  <div class="overlay"></div>
-  <div class="hero-content" style="padding-top: 100px;"> 
-    <img src="https://res.cloudinary.com/dxjq122xi/image/upload/v1750374865/35d35afe-1cd6-461a-ad4b-d67e166e8b43_o46vyk.png" alt="Logo FN" class="logo-fn" />
-    <h1>a estética é a forma visível da alma</h1>
-    <!-- Frase removida como solicitado -->
-    <a href="#portfolio" class="btn-cta">Conheça meu trabalho</a>
-
-
-<div class="mockup-galeria">
-  <div class="linha linha-cima">
-    <div class="mockup ajustado esquerda">
-      <img src="https://res.cloudinary.com/dxjq122xi/image/upload/v1750380067/ChatGPT_Image_19_de_jun._de_2025_21_40_33_mzvc3k.png" alt="">
-    </div>
-    <div class="mockup ajustado direita">
-      <img src="https://res.cloudinary.com/dxjq122xi/image/upload/v1750379649/ChatGPT_Image_19_de_jun._de_2025_21_32_19_gzcl43.png" alt="">
-    </div>
+<section class="servicos-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px 60px; padding: 60px 20px; max-width: 1000px; margin: 0 auto;">
+  
+  <!-- 1. Criação de Sites -->
+  <div class="servico-card" style="flex: 1 1 280px; max-width: 300px; border: 1px solid #c8b572; border-radius: 12px; padding: 24px; background: rgba(0, 0, 0, 0.2); text-align: center;">
+    <img src="https://res.cloudinary.com/dxjq122xi/image/upload/v1750458412/ChatGPT_Image_20_de_jun._de_2025_19_26_07_rucpdn.png" alt="Sites" style="max-width: 100%; height: 120px; object-fit: contain; margin-bottom: 20px;">
+    <h2 style="color: #c8b572;">Criação de Sites</h2>
+    <p style="text-align: justify; margin-bottom: 35px;">
+      Desenvolvimento de sites modernos, com foco em estética, propósito e usabilidade. De one page a projetos completos, adaptados à sua jornada.
+    </p>
+    <a href="#" class="btn-cta">Ver detalhes</a>
   </div>
-  <div class="linha linha-baixo">
-    <div class="mockup ajustado direita">
-      <img src="https://res.cloudinary.com/dxjq122xi/image/upload/v1750383626/ChatGPT_Image_19_de_jun._de_2025_22_40_18_kgjjkn.png" alt="">
-    </div>
-    <div class="mockup ajustado esquerda">
-      <img src="https://res.cloudinary.com/dxjq122xi/image/upload/v1750379661/ChatGPT_Image_19_de_jun._de_2025_21_34_12_accecd.png" alt="">
-    </div>
+
+  <!-- 2. Feeds do Instagram -->
+  <div class="servico-card" style="flex: 1 1 280px; max-width: 300px; border: 1px solid #c8b572; border-radius: 12px; padding: 24px; background: rgba(0, 0, 0, 0.2); text-align: center;">
+    <img src="https://res.cloudinary.com/dxjq122xi/image/upload/v1750458411/ChatGPT_Image_20_de_jun._de_2025_19_26_09_vh5vxj.png" alt="Instagram" style="max-width: 100%; height: 120px; object-fit: contain; margin-bottom: 20px;">
+    <h2 style="color: #c8b572;">Feeds do Instagram</h2>
+    <p style="text-align: justify; margin-bottom: 35px;">
+      Feeds visualmente alinhados com a sua marca. Pacotes com 9 ou 12 postagens organizadas para gerar impacto e conexão.
+    </p>
+    <a href="#" class="btn-cta">Ver detalhes</a>
   </div>
-</div>
 
+  <!-- 3. Pacotes de Postagens -->
+  <div class="servico-card" style="flex: 1 1 280px; max-width: 300px; border: 1px solid #c8b572; border-radius: 12px; padding: 24px; background: rgba(0, 0, 0, 0.2); text-align: center;">
+    <img src="https://res.cloudinary.com/dxjq122xi/image/upload/v1750458415/ChatGPT_Image_20_de_jun._de_2025_19_26_22_fqy8vz.png" alt="Postagens" style="max-width: 100%; height: 120px; object-fit: contain; margin-bottom: 20px;">
+    <h2 style="color: #c8b572;">Pacotes de Postagens</h2>
+    <p style="text-align: justify; margin-bottom: 35px;">
+      Conteúdos prontos para sua rotina digital. Artes + textos estrategicamente pensados em pacotes de 5 à 20 publicações.
+    </p>
+    <a href="#" class="btn-cta">Ver detalhes</a>
   </div>
-</section>
 
-
-
+  <!-- 4. Roteiros para TikTok -->
+  <div class="servico-card" style="flex: 1 1 280px; max-width: 300px; border: 1px solid #c8b572; border-radius: 12px; padding: 24px; background: rgba(0, 0, 0, 0.2); text-align: center;">
+    <img src="https://res.cloudinary.com/dxjq122xi/image/upload/v1750458411/ChatGPT_Image_20_de_jun._de_2025_19_26_23_hfvuji.png" alt="TikTok" style="max-width: 100%; height: 120px; object-fit: contain; margin-bottom: 20px;">
+    <h2 style="color: #c8b572;">Roteiros para TikTok</h2>
+    <p style="text-align: justify; margin-bottom: 35px;">
+      Roteiros estratégicos para vídeos curtos: storytelling, tendências, originalidade e impacto com propósito.
+    </p>
+    <a href="#" class="btn-cta">Ver detalhes</a>
   </div>
-</section>
 
-<!-- Portfólio -->
-<section class="portfolio" id="portfolio">
-  <div class="container">
-    <h2></h2>
-    <div class="grid">
-      <a href="./portfolio/sites.html">Sites</a>
-      <a href="./portfolio/feeds.html">Feeds do Instagram</a>
-      <a href="./portfolio/postagens.html">Pacotes de Postagens</a>
-      <a href="./portfolio/roteiros.html">Roteiros Tik Tok</a>
-      <a href="./portfolio/textos.html">Textos para Blogs e Sites</a>
-      <a href="./portfolio/identidades.html">Identidades Visuais</a>
-    </div>
+  <!-- 5. Textos para Blogs e Sites -->
+  <div class="servico-card" style="flex: 1 1 280px; max-width: 300px; border: 1px solid #c8b572; border-radius: 12px; padding: 24px; background: rgba(0, 0, 0, 0.2); text-align: center;">
+    <img src="https://res.cloudinary.com/dxjq122xi/image/upload/v1750458411/ChatGPT_Image_20_de_jun._de_2025_19_26_25_bsafgs.png" alt="Textos" style="max-width: 100%; height: 120px; object-fit: contain; margin-bottom: 20px;">
+    <h2 style="color: #c8b572;">Textos para Blogs e Sites</h2>
+    <p style="text-align: justify; margin-bottom: 35px;">
+      Estripulias com SEO, textos com voz, clareza e intenção. Ideal para blogs, descrições de produtos ou páginas institucionais.
+    </p>
+    <a href="#" class="btn-cta">Ver detalhes</a>
   </div>
-</section>
 
-<!-- Serviços -->
-<section class="servicos" id="servicos">
-  <div class="container teaser-servicos">
-    <h2 class="servico-poetico">Cada criação é única.</h2>
-    <p class="servico-frase">Mas se quiser saber o que posso fazer por você...</p>
-<a href="servicos.html" class="btn-cta transparente">Ver serviços</a>
+  <!-- 6. Identidades Visuais -->
+  <div class="servico-card" style="flex: 1 1 280px; max-width: 300px; border: 1px solid #c8b572; border-radius: 12px; padding: 24px; background: rgba(0, 0, 0, 0.2); text-align: center;">
+    <img src="https://res.cloudinary.com/dxjq122xi/image/upload/v1750458409/ChatGPT_Image_20_de_jun._de_2025_19_26_27_wrjtay.png" alt="Identidade Visual" style="max-width: 100%; height: 120px; object-fit: contain; margin-bottom: 20px;">
+    <h2 style="color: #c8b572;">Identidades Visuais</h2>
+    <p style="text-align: justify; margin-bottom: 235x;">
+      Conceito, tipografia e estilo. Um logo que diz tudo sem dizer nada. Inclui logo, paleta, fontes e mockup.
+    </p>
+    <a href="#" class="btn-cta">Solicitar</a>
   </div>
+
 </section>
 
 
-<!-- Contato -->
-<section class="contato" id="contato">
-  <div class="container">
-    <h2>Contato</h2>
-    <p>Me conta seu projeto. Eu te devolvo em forma.</p>
-    <a href="https://wa.me/5511939014504" target="_blank" class="btn-cta">Falar no WhatsApp</a>
-    <p class="final">Nos vemos onde forma e alma se encontram.</p>
-  </div>
-</section>
 
 
 <footer>
   <p>&copy; Forma Nexus — 2025</p>
   <a href="https://instagram.com/aformanexus" target="_blank">Instagram</a>
 </footer>
-
 
 <script src="script.js"></script>
 
@@ -144,17 +126,15 @@
   dropdown.addEventListener('mouseleave', () => {
     hideTimeout = setTimeout(() => {
       dropdown.classList.remove('open');
-    }, 400); // tempo de espera para sumir (em milissegundos)
+    }, 400);
   });
 
-  // Também garante clique abre/fecha normalmente
   const toggle = dropdown.querySelector('.dropdown-toggle');
   toggle.addEventListener('click', (e) => {
-    e.preventDefault(); // impede o clique de causar comportamento padrão
+    e.preventDefault();
     dropdown.classList.toggle('open');
   });
 
-  // Fecha ao clicar fora
   document.addEventListener('click', (e) => {
     if (!dropdown.contains(e.target)) {
       dropdown.classList.remove('open');
@@ -164,4 +144,3 @@
 
 </body>
 </html>
-
