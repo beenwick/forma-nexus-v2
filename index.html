@@ -15,20 +15,24 @@
   <div class="navbar-container">
     <nav class="navbar">
       <a href="index.html" class="logo">FN</a>
+      
       <ul class="nav-links">
-        <li><a href="index.html#inicio">Início</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Portfólio ▼</a>
-          <ul class="dropdown-menu">
-            <li><a href="./portfolio/sites.html">Sites</a></li>
-            <li><a href="./portfolio/feeds.html">Feeds do Instagram</a></li>
-            <li><a href="./portfolio/postagens.html">Pacotes de Postagens</a></li>
-            <li><a href="./portfolio/roteiros.html">Roteiros Tik Tok</a></li>
-            <li><a href="./portfolio/textos.html">Textos para Blogs e Sites</a></li>
-            <li><a href="./portfolio/identidades.html">Identidades Visuais</a></li>
-          </ul>
-        </li>
-      </ul>
+  <li><a href="index.html#inicio">Início</a></li>
+  <li class="dropdown">
+    <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Portfólio ▼</a>
+    <ul class="dropdown-menu">
+      <li><a href="./portfolio/sites.html">Sites</a></li>
+      <li><a href="./portfolio/feeds.html">Feeds do Instagram</a></li>
+      <li><a href="./portfolio/postagens.html">Pacotes de Postagens</a></li>
+      <li><a href="./portfolio/roteiros.html">Roteiros Tik Tok</a></li>
+      <li><a href="./portfolio/textos.html">Textos para Blogs e Sites</a></li>
+      <li><a href="./portfolio/identidades.html">Identidades Visuais</a></li>
+    </ul>
+  </li>
+  <li><a href="servicos.html">Serviços</a></li>
+  <li><a href="contato.html">Contato</a></li>
+</ul>
+
     </nav>
   </div>
 </header>
@@ -127,6 +131,37 @@
 
 
 <script src="script.js"></script>
+
+<script>
+  const dropdown = document.querySelector('.dropdown');
+  let hideTimeout;
+
+  dropdown.addEventListener('mouseenter', () => {
+    clearTimeout(hideTimeout);
+    dropdown.classList.add('open');
+  });
+
+  dropdown.addEventListener('mouseleave', () => {
+    hideTimeout = setTimeout(() => {
+      dropdown.classList.remove('open');
+    }, 400); // tempo de espera para sumir (em milissegundos)
+  });
+
+  // Também garante clique abre/fecha normalmente
+  const toggle = dropdown.querySelector('.dropdown-toggle');
+  toggle.addEventListener('click', (e) => {
+    e.preventDefault(); // impede o clique de causar comportamento padrão
+    dropdown.classList.toggle('open');
+  });
+
+  // Fecha ao clicar fora
+  document.addEventListener('click', (e) => {
+    if (!dropdown.contains(e.target)) {
+      dropdown.classList.remove('open');
+    }
+  });
+</script>
+
 </body>
 </html>
 
