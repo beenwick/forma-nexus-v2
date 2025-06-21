@@ -1072,3 +1072,37 @@ footer a {
     display: flex;
   }
 }
+
+/* === DETALHES DOS SERVIÇOS (EXPANSÍVEIS) === */
+.servico-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.detalhes-servico {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(10, 10, 10, 0.95);
+  padding: 16px;
+  display: none;
+  text-align: left;
+  color: #fffad1;
+  font-size: 0.95rem;
+  border-top: 1px solid #c8b572;
+  border-radius: 0 0 12px 12px;
+  z-index: 5;
+  animation: fadeInUp 0.3s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
