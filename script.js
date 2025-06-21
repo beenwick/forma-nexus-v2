@@ -1,3 +1,4 @@
+// Dropdown do menu (continua funcionando)
 document.querySelectorAll('.navbar .dropdown > a').forEach(link => {
   link.addEventListener('click', function(e) {
     e.preventDefault();
@@ -19,7 +20,7 @@ document.querySelectorAll('.navbar .dropdown > a').forEach(link => {
   });
 });
 
-// Fecha dropdown se clicar fora do menu
+// Fecha dropdown se clicar fora
 document.addEventListener('click', function(e) {
   if (!e.target.closest('.navbar .dropdown')) {
     document.querySelectorAll('.navbar .dropdown-menu').forEach(menu => {
@@ -28,7 +29,7 @@ document.addEventListener('click', function(e) {
   }
 });
 
-// Expansão de detalhes dos serviços com hover
+// ✅ Código funcional para o botão "Ver detalhes"
 document.querySelectorAll('.toggle-detalhes').forEach(botao => {
   const card = botao.closest('.servico-card');
   const detalhes = card.querySelector('.detalhes-servico');
@@ -37,14 +38,16 @@ document.querySelectorAll('.toggle-detalhes').forEach(botao => {
   botao.addEventListener('click', function (e) {
     e.preventDefault();
 
-    // Fecha outros cards
+    // Fecha outros cards abertos
     document.querySelectorAll('.detalhes-servico').forEach(outro => {
       if (outro !== detalhes) outro.style.display = 'none';
     });
+
     document.querySelectorAll('.toggle-detalhes').forEach(btn => {
       if (btn !== this) btn.textContent = 'Ver detalhes';
     });
 
+    // Alterna exibição do card clicado
     if (detalhes.style.display === 'block') {
       detalhes.style.display = 'none';
       this.textContent = 'Ver detalhes';
@@ -54,10 +57,12 @@ document.querySelectorAll('.toggle-detalhes').forEach(botao => {
     }
   });
 
+  // Mantém visível se o mouse estiver sobre a caixinha
   detalhes.addEventListener('mouseenter', () => {
     clearTimeout(hideTimeout);
   });
 
+  // Fecha a caixinha com 1 segundo de atraso ao sair
   detalhes.addEventListener('mouseleave', () => {
     hideTimeout = setTimeout(() => {
       detalhes.style.display = 'none';
