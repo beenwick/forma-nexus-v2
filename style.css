@@ -1109,13 +1109,8 @@ footer a {
     opacity: 1;
   }
 }
-/* === SUBMENU COM TRANSIÇÃO SUAVE === */
-.dropdown-menu {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-}
+/* === SUBMENU COM TRANSIÇÃO SUAVE DELETADO=== */
+
 
 .dropdown:hover .dropdown-menu {
   opacity: 1;
@@ -1176,26 +1171,91 @@ footer a {
   position: relative;
 }
 
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: var(--azul-petroleo);
-  border-radius: 6px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  display: none;
-  min-width: 200px;
-  z-index: 1500;
-  padding: 0.5rem 0;
-  transition: opacity 0.3s ease;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
+
+.servico-card {
+  flex: 1 1 280px;
+  max-width: 300px;
+  border: 1px solid #c8b572;
+  border-radius: 12px;
+  padding: 20px 20px 30px;
+  background: rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
-.dropdown:hover .dropdown-menu {
+.servico-card img {
+  height: 280px;
+  width: 100%;
+  object-fit: cover;
+  border: 3px solid #c8b572;
+  border-radius: 8px;
+  opacity: 0.75;
   display: block;
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
+  margin: 0 auto;
+}
+
+.servico-card h2 {
+  color: #c8b572;
+  margin-top: 16px;
+}
+
+.servico-card p {
+  text-align: justify;
+  margin-bottom: 35px;
+}
+
+.detalhes-servico {
+  display: none;
+  margin-top: 16px;
+  text-align: left;
+  color: #fffad1;
+  font-size: 0.95rem;
+}
+/* RESPONSIVO: até 1024px (notebooks pequenos e tablets em paisagem) */
+@media (max-width: 1024px) {
+  .servicos-grid {
+    gap: 30px 40px;
+    padding: 50px 15px;
+  }
+
+  .servico-card {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+}
+
+/* RESPONSIVO: até 768px (tablets e celulares maiores) */
+@media (max-width: 768px) {
+  .servicos-grid {
+    gap: 20px 20px;
+    padding: 40px 10px;
+  }
+
+  .servico-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .servico-card img {
+    height: 220px;
+  }
+}
+
+/* RESPONSIVO: até 480px (celular pequeno mesmo, tipo tela de story) */
+@media (max-width: 480px) {
+  .servico-card {
+    padding: 16px 12px 24px;
+  }
+
+  .servico-card h2 {
+    font-size: 1.2rem;
+  }
+
+  .servico-card p,
+  .detalhes-servico {
+    font-size: 0.9rem;
+  }
+
+  .servico-card img {
+    height: 200px;
+  }
 }

@@ -1,33 +1,43 @@
-// Dropdown do menu (continua funcionando)
-document.querySelectorAll('.navbar .dropdown > a').forEach(link => {
-  link.addEventListener('click', function(e) {
-    e.preventDefault();
-    const dropdown = this.nextElementSibling;
+document.querySelectorAll('.navbar .dropdown').forEach(dropdown => {
+  const toggle = dropdown.querySelector('a');
+  const menu = dropdown.querySelector('.dropdown-menu');
+  let timeout;
 
-    // Fecha outros dropdowns abertos
-    document.querySelectorAll('.navbar .dropdown-menu').forEach(menu => {
-      if (menu !== dropdown) {
-        menu.style.display = 'none';
-      }
+  // Abre/fecha ao clicar
+  toggle.addEventListener('click', e => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    // Fecha outros dropdowns
+    document.querySelectorAll('.dropdown-menu').forEach(m => {
+      if (m !== menu) m.style.display = 'none';
     });
 
-    // Alterna visibilidade do dropdown clicado
-    if (dropdown.style.display === 'block') {
-      dropdown.style.display = 'none';
-    } else {
-      dropdown.style.display = 'block';
-    }
+    menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+  });
+
+  // Delay para sumir ao sair com o mouse
+  dropdown.addEventListener('mouseenter', () => {
+    clearTimeout(timeout);
+    menu.style.display = 'block';
+  });
+
+  dropdown.addEventListener('mouseleave', () => {
+    timeout = setTimeout(() => {
+      menu.style.display = 'none';
+    }, 500); // delay de 0.5s
   });
 });
 
-// Fecha dropdown se clicar fora
-document.addEventListener('click', function(e) {
+// Clicar fora fecha todos
+document.addEventListener('click', e => {
   if (!e.target.closest('.navbar .dropdown')) {
-    document.querySelectorAll('.navbar .dropdown-menu').forEach(menu => {
+    document.querySelectorAll('.dropdown-menu').forEach(menu => {
       menu.style.display = 'none';
     });
   }
 });
+
 
 // ✅ Código funcional para o botão "Ver detalhes"
 document.querySelectorAll('.toggle-detalhes').forEach(botao => {
