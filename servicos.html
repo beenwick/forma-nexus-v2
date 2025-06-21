@@ -1,21 +1,25 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Serviços | Forma Nexus</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&amp;family=Poppins:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
+  <!-- Favicon padrão -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Serviços | Forma Nexus</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <link href="style.css" rel="stylesheet"/>
 </head>
 <body>
-<header>
-<div class="navbar-container">
-<nav class="navbar">
-<a class="logo" href="index.html">🪐</a>
-<ul class="nav-links">
-<li><a href="index.html#inicio">Início</a></li>
-<li class="dropdown">
+  <header>
+    <div class="navbar-container">
+      <nav class="navbar">
+        <a class="logo" href="index.html">🪐</a>
+        <ul class="nav-links">
+          <li><a href="index.html#inicio">Início</a></li>
+          <li class="dropdown">
   <a href="#">Portfólio ▼</a>
   <ul class="dropdown-menu">
     <li><a href="./portfolio/sites.html">Sites</a></li>
@@ -135,28 +139,4 @@
 <a href="https://instagram.com/aformanexus" target="_blank">Instagram</a>
 </footer>
 <script src="script.js"></script>
-<script>
-  const botoesDetalhes = document.querySelectorAll('.toggle-detalhes');
-
-  botoesDetalhes.forEach(botao => {
-    botao.addEventListener('click', function(e) {
-      e.preventDefault();
-      const detalhes = this.nextElementSibling;
-      const estaVisivel = detalhes.style.display === 'block';
-      
-      // Fecha todos os outros
-      document.querySelectorAll('.detalhes-servico').forEach(div => {
-        div.style.display = 'none';
-      });
-      document.querySelectorAll('.toggle-detalhes').forEach(btn => {
-        btn.textContent = 'Ver detalhes';
-      });
-
-      if (!estaVisivel) {
-        detalhes.style.display = 'block';
-        this.textContent = 'Ocultar detalhes';
-      }
-    });
-  });
-</script>
 </html>

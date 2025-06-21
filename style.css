@@ -274,39 +274,12 @@ footer a {
   opacity: 1;
   transform: translateY(0);
 }
-/* === MENU FIXO TOPO === */
-header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background: transparent;
-  z-index: 1000;
-  transition: background-color 0.3s ease;
-  font-family: 'Poppins', sans-serif;
-  box-shadow: none;
-  padding: 0.5rem 2rem;
-}
+/* === MENU FIXO TOPO DELETADO === */
 
 header.scrolled {
   background: rgba(52, 73, 94, 0.95); /* azul petróleo com transparência */
   box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
-
-.navbar {
-  position: fixed;              /* fixa no topo */
-  top: 0;                       /* encosta no topo */
-  width: 100%;                  /* ocupa toda a largura */
-  max-width: 960px;             /* limite central */
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: transparent;
-  padding: 1.2rem 2rem;         /* espaço interno */
-  z-index: 999;                 /* garante que fique acima de tudo */
-}
-
 
 .logo {
   font-family: 'Playfair Display', serif;
@@ -1024,11 +997,7 @@ footer a {
   padding: 100px 2rem 5rem; /* ou 11rem se preferir */
   gap: 3rem;
 }
-.navbar-container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 32px;
-}
+
 
 .navbar {
   display: flex;
@@ -1082,22 +1051,7 @@ footer a {
   z-index: 1;
 }
 
-.detalhes-servico {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background: rgba(32, 29, 21, 0.95); /* tom quente e escuro */
-  padding: 16px;
-  display: none;
-  text-align: left;
-  color: #fff8d9;
-  font-size: 0.95rem;
-  border-top: 1px solid #c8b572;
-  border-radius: 0 0 12px 12px;
-  z-index: 10; /* balão acima do botão */
-  animation: fadeInUp 0.3s ease;
-}
+
 
 @keyframes fadeInUp {
   from {
@@ -1203,13 +1157,7 @@ footer a {
   margin-bottom: 35px;
 }
 
-.detalhes-servico {
-  display: none;
-  margin-top: 16px;
-  text-align: left;
-  color: #fffad1;
-  font-size: 0.95rem;
-}
+
 /* RESPONSIVO: até 1024px (notebooks pequenos e tablets em paisagem) */
 @media (max-width: 1024px) {
   .servicos-grid {
@@ -1251,11 +1199,107 @@ footer a {
   }
 
   .servico-card p,
-  .detalhes-servico {
-    font-size: 0.9rem;
-  }
+  
 
   .servico-card img {
     height: 200px;
   }
+}
+/* Navbar fixa inicialmente no topo */
+.navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;      /* fundo 100% transparente */
+  transition: top 0.4s ease;          /* controla sumir/reaparecer */
+  z-index: 1000;
+}
+
+.navbar-container.navbar-escondida {
+  top: -100px;                        /* esconde a barra ao rolar */
+}
+
+
+
+/* Quando a navbar some */
+.navbar-container.navbar-escondida {
+  top: -100px; /* Esconde para cima */
+}
+
+/* === Conteúdo interno da navbar === */
+.navbar {
+  position: relative;        /* volta a fluir dentro do container */
+  max-width: 960px;          /* largura máxima do conteúdo */
+  margin: 0 auto;            /* centraliza dentro do container */
+  padding: 0.5rem 1rem;      /* espaçamento interno */
+  display: flex;
+  justify-content: space-between; /* logo à esquerda, links à direita */
+  align-items: center;
+  background: transparent;   /* herda o fundo do container */
+}
+
+/* ─── Glass-morphism mini-cards sem imagem, 3×2, mesmo tamanho ─── */
+.portfolio-buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.portfolio-buttons-grid a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;                        /* mesma altura para todos */
+  padding: 0 1rem;                     /* espaçamento horizontal */
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--dourado-fosco);
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--branco-leitoso);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.portfolio-buttons-grid a span {
+  text-align: center;
+}
+
+.portfolio-buttons-grid a:hover {
+  background: var(--dourado-fosco);
+  color: var(--azul-petroleo);
+  transform: translateY(-4px);
+}
+
+.detalhes-servico {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(32, 29, 21, 0.95); /* tom quente e escuro */
+  padding: 16px;
+  display: none;
+  text-align: left;
+  color: #fff8d9;
+  font-size: 0.95rem;
+  border-top: 1px solid #c8b572;
+  border-radius: 0 0 12px 12px;
+  z-index: 10;
+  animation: fadeInUp 0.3s ease;
+}
+
+.detalhes-servico {
+  display: none;
+  opacity: 0;
+  transform: translateY(30%);
+  transition: all 0.4s ease;
+}
+
+.detalhes-servico.mostrar {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
 }

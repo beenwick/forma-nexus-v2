@@ -19,7 +19,7 @@
       <ul class="nav-links">
   <li><a href="index.html#inicio">Início</a></li>
   <li class="dropdown">
-  <a href="#">Portfólio ▼</a>
+  <a href="#" class="dropdown-toggle">Portfólio ▼</a>
   <ul class="dropdown-menu">
     <li><a href="./portfolio/sites.html">Sites</a></li>
     <li><a href="./portfolio/feeds.html">Feeds do Instagram</a></li>
@@ -91,17 +91,17 @@
 <!-- Portfólio -->
 <section class="portfolio" id="portfolio">
   <div class="container">
-    <h2></h2>
-    <div class="grid">
-      <a href="./portfolio/sites.html">Sites</a>
-      <a href="./portfolio/feeds.html">Feeds do Instagram</a>
-      <a href="./portfolio/postagens.html">Pacotes de Postagens</a>
-      <a href="./portfolio/roteiros.html">Roteiros Tik Tok</a>
-      <a href="./portfolio/textos.html">Textos para Blogs e Sites</a>
-      <a href="./portfolio/identidades.html">Identidades Visuais</a>
+    <div class="portfolio-buttons-grid">
+      <a href="./portfolio/sites.html"><span>Sites</span></a>
+      <a href="./portfolio/feeds.html"><span>Feeds do Instagram</span></a>
+      <a href="./portfolio/postagens.html"><span>Pacotes de Postagens</span></a>
+      <a href="./portfolio/roteiros.html"><span>Roteiros TikTok</span></a>
+      <a href="./portfolio/textos.html"><span>Textos para Blogs e Sites</span></a>
+      <a href="./portfolio/identidades.html"><span>Identidades Visuais</span></a>
     </div>
   </div>
 </section>
+
 
 <!-- Serviços -->
 <section class="servicos" id="servicos">
@@ -131,8 +131,8 @@
 
 
 <script src="script.js"></script>
-
 <script>
+  // ------------------ SUBMENU PORTFÓLIO ------------------
   const dropdown = document.querySelector('.dropdown');
   let hideTimeout;
 
@@ -144,21 +144,37 @@
   dropdown.addEventListener('mouseleave', () => {
     hideTimeout = setTimeout(() => {
       dropdown.classList.remove('open');
-    }, 400); // tempo de espera para sumir (em milissegundos)
+    }, 400);
   });
 
-  // Também garante clique abre/fecha normalmente
   const toggle = dropdown.querySelector('.dropdown-toggle');
   toggle.addEventListener('click', (e) => {
-    e.preventDefault(); // impede o clique de causar comportamento padrão
+    e.preventDefault();
     dropdown.classList.toggle('open');
   });
 
-  // Fecha ao clicar fora
   document.addEventListener('click', (e) => {
     if (!dropdown.contains(e.target)) {
       dropdown.classList.remove('open');
     }
+  });
+
+  // ------------------ NAVBAR ESCONDE AO ROLAR ------------------
+  let prevScroll = window.scrollY;
+  const navbar = document.querySelector('.navbar-container');
+
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.scrollY;
+
+    if (currentScroll > prevScroll && currentScroll > 100) {
+      // Rolando pra baixo
+      navbar.classList.add('navbar-escondida');
+    } else {
+      // Rolando pra cima
+      navbar.classList.remove('navbar-escondida');
+    }
+
+    prevScroll = currentScroll;
   });
 </script>
 
