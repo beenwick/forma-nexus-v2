@@ -1,64 +1,294 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfólio - Feeds do Instagram | Forma Nexus</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <title>Feeds do Instagram | Forma Nexus</title>
+
   <link rel="stylesheet" href="../style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header>
-<nav class="navbar">
-  <a href="../index.html" class="logo">Forma Nexus</a>
-  <ul class="nav-links">
-    <li><a href="../index.html#inicio">Início</a></li>
-    <li class="dropdown">
-      <a href="../index.html#portfolio">Portfólio ▼</a>
-      <ul class="dropdown-menu">
-        <li><a href="sites.html">Sites</a></li>
-        <li><a href="feeds.html">Feeds do Instagram</a></li>
-        <li><a href="postagens.html">Pacotes de Postagens</a></li>
-        <li><a href="roteiros.html">Roteiros e Vídeos</a></li>
-        <li><a href="textos.html">Textos para Blogs e Sites</a></li>
-        <li><a href="identidades.html">Identidades Visuais</a></li>
+
+<header>
+  <div class="navbar-container">
+    <nav class="navbar">
+      <a href="../index.html" class="logo">🪐</a>
+      <ul class="nav-links">
+        <li><a href="../index.html#inicio">Início</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Portfólio ▼</a>
+          <ul class="dropdown-menu">
+            <li><a href="sites.html">Sites</a></li>
+            <li><a href="feeds.html">Feeds do Instagram</a></li>
+            <li><a href="postagens.html">Pacotes de Postagens</a></li>
+            <li><a href="roteiros.html">Roteiros TikTok</a></li>
+            <li><a href="textos.html">Textos para Blogs e Sites</a></li>
+            <li><a href="identidades.html">Identidades Visuais</a></li>
+          </ul>
+        </li>
+        <li><a href="../servicos.html">Serviços</a></li>
+        <li><a href="../contato.html">Contato</a></li>
       </ul>
-    </li>
-    <li><a href="../index.html#servicos">Serviços</a></li>
-    <li><a href="../index.html#contato">Contato</a></li>
-  </ul>
-</nav>
-  </header>
+    </nav>
+  </div>
+</header>
 
-  <main class="container portfolio">
-    <h1>Feeds do Instagram</h1>
-    <p>Identidades visuais que encantam à primeira vista. Cada feed é construído com propósito estético e coerência, revelando a alma da marca em grades harmoniosas e cativantes.</p>
-    
-    <div class="grid">
-      <div class="mockup">
-        <img src="https://via.placeholder.com/320x320?text=Grade+1" alt="Feed 1" />
-        <p>Feed para marca de cosméticos naturais — tons terrosos, frases curtas e leveza visual.</p>
-      </div>
-      <div class="mockup">
-        <img src="https://via.placeholder.com/320x320?text=Grade+2" alt="Feed 2" />
-        <p>Perfil de terapeuta holística — mandalas, cristais e mensagens diárias em lilás e dourado.</p>
-      </div>
-      <div class="mockup">
-        <img src="https://via.placeholder.com/320x320?text=Grade+3" alt="Feed 3" />
-        <p>Estética para músico independente — arte mística, trechos de letras e clima noturno.</p>
-      </div>
-      <div class="mockup">
-        <img src="https://via.placeholder.com/320x320?text=Grade+4" alt="Feed 4" />
-        <p>Feed para loja esotérica — carrosséis educativos, símbolos sagrados e paleta celestial.</p>
-      </div>
+<!-- 👇 Aqui começa o conteúdo principal da página -->
+<main style="padding: 200px 20px 80px; text-align: center;">
+  <h1 style="color: var(--dourado-fosco); font-family: 'Playfair Display', serif;">
+    f e e d s // instagram
+  </h1>
+  <p style="color: var(--branco-leitoso); margin-top: 12px;">
+    vamos tirar do papel seu feed dos sonhos
+  </p>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--azul-petroleo);
+    background-image: url('https://res.cloudinary.com/dxjq122xi/image/upload/v1750364110/ChatGPT_Image_19_06_2025_17_14_18_bg41ss.png');
+    background-repeat: repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    color: #fff;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  .timeline-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 120px auto;
+    padding-left: 15px;
+    border-left: 3px solid #C9B37E;
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 100px;
+    padding-left: 56px;
+    transition: all 0.4s ease;
+    text-align: center;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    width: 12px;
+    height: 12px;
+    background: #D4AF37;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px #0b0b0b;
+  }
+
+  .timeline-item img {
+    width: 100%;
+    max-width: 320px;
+    border-radius: 22px;
+    border: 3px solid #C9B37E;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+  }
+
+  .timeline-item.show img {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .timeline-text {
+    margin-top: 12px;
+  }
+
+  .timeline-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #C9B37E;
+  }
+
+  .timeline-desc {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #ccc;
+    margin-top: 6px;
+    white-space: pre-line;
+  }
+
+  .timeline-cta {
+    margin-top: 100px;
+    text-align: center;
+  }
+
+  .timeline-cta p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .timeline-cta a {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #D4AF37;
+    color: #111;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: transform 0.3s ease;
+  }
+
+  .timeline-cta a:hover {
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 600px) {
+    .timeline-container {
+      padding-left: 15px;
+    }
+    .timeline-item {
+      padding-left: 15px;
+    }
+    .timeline-item img {
+      max-width: 100%;
+    }
+  }
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 100px;
+  padding-left: 56px;
+  transition: all 0.4s ease;
+  text-align: center;
+}
+
+.timeline-item .mockup-wrapper {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 22px;
+}
+
+.timeline-item .mockup-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.2);
+  transition: background 0.3s ease;
+  z-index: 2;
+}
+
+.timeline-item .mockup-wrapper:hover::before {
+  background: rgba(0,0,0,0);
+}
+</style>
+
+
+<section class="timeline-container">
+  <div class="timeline-item">
+    <div class="mockup-wrapper"><img loading="lazy" src="https://res.cloudinary.com/dxjq122xi/image/upload/v1750562005/E0C0391E-0BA7-47ED-A106-EC1E04FA561E_uufish.png" /></div>
+    <div class="timeline-text">
+      <div class="timeline-title">Feed Café</div>
+      <div class="timeline-desc">Estética terrosa e acolhedora
+Marcas que despertam conforto e conexão.</div>
     </div>
+  </div>
+  <div class="timeline-item">
+    <div class="mockup-wrapper"><img loading="lazy" src="https://res.cloudinary.com/dxjq122xi/image/upload/v1750562005/E0C0391E-0BA7-47ED-A106-EC1E04FA561E_uufish.png" /></div>
+    <div class="timeline-text">
+      <div class="timeline-title">Fiteza</div>
+      <div class="timeline-desc">Energia e contraste visual
+Para produtos criativos e autorais.</div>
+    </div>
+  </div>
+  <div class="timeline-item">
+    <div class="mockup-wrapper"><img loading="lazy" src="https://res.cloudinary.com/dxjq122xi/image/upload/v1750562005/E0C0391E-0BA7-47ED-A106-EC1E04FA561E_uufish.png" /></div>
+    <div class="timeline-text">
+      <div class="timeline-title">Consultoria</div>
+      <div class="timeline-desc">Design sutil e elegante
+Com foco em credibilidade premium.</div>
+    </div>
+  </div>
+  <div class="timeline-item">
+    <div class="mockup-wrapper"><img loading="lazy" src="https://res.cloudinary.com/dxjq122xi/image/upload/v1750562005/E0C0391E-0BA7-47ED-A106-EC1E04FA561E_uufish.png" /></div>
+    <div class="timeline-text">
+      <div class="timeline-title">Fitness</div>
+      <div class="timeline-desc">Feed intenso e vibrante
+Com foco em performance e ação.</div>
+    </div>
+  </div>
+  <div class="timeline-item">
+    <div class="mockup-wrapper"><img loading="lazy" src="https://res.cloudinary.com/dxjq122xi/image/upload/v1750562005/E0C0391E-0BA7-47ED-A106-EC1E04FA561E_uufish.png" /></div>
+    <div class="timeline-text">
+      <div class="timeline-title">Espiritualidade</div>
+      <div class="timeline-desc">Design fluido e etéreo
+Ideal para marcas conectadas ao sutil.</div>
+    </div>
+  </div>
+</section>
 
-    <a href="../index.html#contato" class="btn-cta">Quero algo assim</a>
-  </main>
+<div class="timeline-cta">
+  <p>Curtiu os projetos? Bora criar o seu?</p>
+  <a href="../contato.html">Entrar em contato</a>
+</div>
 
-  <footer>
-    <p>&copy; Forma Nexus — 2025</p>
-    <a href="https://instagram.com/nexus4stral" target="_blank" rel="noopener noreferrer">Instagram</a>
-  </footer>
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll('.timeline-item').forEach(item => {
+    observer.observe(item);
+  });
+</script>
+
+
+</main>
+
+<footer>
+  <p>&copy; Forma Nexus — 2025</p>
+  <a href="https://instagram.com/aformanexus" target="_blank">Instagram</a>
+</footer>
+
+<script src="../script.js"></script>
+<script>
+  const dropdown = document.querySelector('.dropdown');
+  let hideTimeout;
+
+  dropdown.addEventListener('mouseenter', () => {
+    clearTimeout(hideTimeout);
+    dropdown.classList.add('open');
+  });
+
+  dropdown.addEventListener('mouseleave', () => {
+    hideTimeout = setTimeout(() => {
+      dropdown.classList.remove('open');
+    }, 400);
+  });
+
+  const toggle = dropdown.querySelector('.dropdown-toggle');
+  toggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    dropdown.classList.toggle('open');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!dropdown.contains(e.target)) {
+      dropdown.classList.remove('open');
+    }
+  });
+</script>
+
 </body>
 </html>

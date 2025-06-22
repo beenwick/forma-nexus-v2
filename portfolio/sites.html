@@ -1,59 +1,83 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio – Sites | Forma Nexus</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Feeds do Instagram | Forma Nexus</title>
+
+  <link rel="stylesheet" href="../style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
+
 <header>
-  <nav class="navbar">
-  <a href="../index.html" class="logo">Forma Nexus</a>
-  <ul class="nav-links">
-    <li><a href="../index.html#inicio">Início</a></li>
-    <li class="dropdown">
-      <a href="../index.html#portfolio">Portfólio ▼</a>
-      <ul class="dropdown-menu">
-        <li><a href="sites.html">Sites</a></li>
-        <li><a href="feeds.html">Feeds do Instagram</a></li>
-        <li><a href="postagens.html">Pacotes de Postagens</a></li>
-        <li><a href="roteiros.html">Roteiros e Vídeos</a></li>
-        <li><a href="textos.html">Textos para Blogs e Sites</a></li>
-        <li><a href="identidades.html">Identidades Visuais</a></li>
+  <div class="navbar-container">
+    <nav class="navbar">
+      <a href="../index.html" class="logo">🪐</a>
+      <ul class="nav-links">
+        <li><a href="../index.html#inicio">Início</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Portfólio ▼</a>
+          <ul class="dropdown-menu">
+            <li><a href="sites.html">Sites</a></li>
+            <li><a href="feeds.html">Feeds do Instagram</a></li>
+            <li><a href="postagens.html">Pacotes de Postagens</a></li>
+            <li><a href="roteiros.html">Roteiros TikTok</a></li>
+            <li><a href="textos.html">Textos para Blogs e Sites</a></li>
+            <li><a href="identidades.html">Identidades Visuais</a></li>
+          </ul>
+        </li>
+        <li><a href="../servicos.html">Serviços</a></li>
+        <li><a href="../contato.html">Contato</a></li>
       </ul>
-    </li>
-    <li><a href="../index.html#servicos">Serviços</a></li>
-    <li><a href="../index.html#contato">Contato</a></li>
-  </ul>
-</nav>
+    </nav>
+  </div>
 </header>
-  <section class="container">
-    <h1>Sites que contam histórias</h1>
-    <p>Nem todo site é uma vitrine. Alguns são portais que traduzem a alma de um projeto. Aqui estão criações fictícias que nasceram do silêncio, da escuta e da estética sutil.</p>
 
-    <div class="grid">
-      <div class="mockup">
-        <img src="https://via.placeholder.com/600x400.png?text=Projeto+1" alt="Mockup do Site 1">
-        <h3>Casa Elemental</h3>
-        <p>Um espaço virtual para uma terapeuta holística. Navegação fluida, cores naturais e presença em cada detalhe.</p>
-      </div>
+<!-- 👇 Aqui começa o conteúdo principal da página -->
+<main style="padding: 200px 20px 80px; text-align: center;">
+  <h1 style="color: var(--dourado-fosco); font-family: 'Playfair Display', serif;">
+    Título da Página
+  </h1>
+  <p style="color: var(--branco-leitoso); margin-top: 12px;">
+    Subtítulo ou descrição introdutória aqui.
+  </p>
+</main>
 
-      <div class="mockup">
-        <img src="https://via.placeholder.com/600x400.png?text=Projeto+2" alt="Mockup do Site 2">
-        <h3>Loja Astral</h3>
-        <p>Uma e-commerce imaginária com essência mística: cristais, aromas e símbolos. Design limpo com aura mágica.</p>
-      </div>
+<footer>
+  <p>&copy; Forma Nexus — 2025</p>
+  <a href="https://instagram.com/aformanexus" target="_blank">Instagram</a>
+</footer>
 
-      <div class="mockup">
-        <img src="https://via.placeholder.com/600x400.png?text=Projeto+3" alt="Mockup do Site 3">
-        <h3>Som do Invisível</h3>
-        <p>Site fictício de um músico experimental. Fundo escuro, sombreamento sensível e uma estética que reverbera.</p>
-      </div>
-    </div>
+<script src="../script.js"></script>
+<script>
+  const dropdown = document.querySelector('.dropdown');
+  let hideTimeout;
 
-    <a href="https://wa.me/SEUNUMERO" class="btn-cta">Quero algo assim</a>
-  </section>
+  dropdown.addEventListener('mouseenter', () => {
+    clearTimeout(hideTimeout);
+    dropdown.classList.add('open');
+  });
+
+  dropdown.addEventListener('mouseleave', () => {
+    hideTimeout = setTimeout(() => {
+      dropdown.classList.remove('open');
+    }, 400);
+  });
+
+  const toggle = dropdown.querySelector('.dropdown-toggle');
+  toggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    dropdown.classList.toggle('open');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!dropdown.contains(e.target)) {
+      dropdown.classList.remove('open');
+    }
+  });
+</script>
+
 </body>
 </html>

@@ -1,183 +1,153 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FormaNexus</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Forma Nexus</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* Dropdown Styles */
+    .dropdown { position: relative; }
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: var(--azul-petroleo);
+      border-radius: 6px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      display: none;
+      min-width: 180px;
+      padding: 0.5rem 0;
+      z-index: 1500;
+    }
+    .dropdown-menu li { list-style: none; }
+    .dropdown-menu a {
+      display: block;
+      padding: 0.5rem 1rem;
+      color: var(--branco-leitoso);
+      text-decoration: none;
+    }
+    .dropdown-menu a:hover {
+      background: var(--lilas-nevoa);
+      color: var(--azul-petroleo);
+    }
+    .dropdown.open .dropdown-menu,
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+    /* Hide navbar on scroll */
+    header.oculto { transform: translateY(-100%); transition: transform 0.3s ease; }
+  </style>
 </head>
 <body>
-<!-- Analisando e igualando a estrutura entre index.html e contato.html -->
-
-<!-- PASSO 1: Garanta que o header e a navbar estejam exatamente assim em TODAS as páginas -->
-<header>
-  <div class="navbar-container">
-    <nav class="navbar">
-      <a href="index.html" class="logo">🪐</a>
-      
-      <ul class="nav-links">
-  <li><a href="index.html#inicio">Início</a></li>
-  <li class="dropdown">
-  <a href="#" class="dropdown-toggle">Portfólio ▼</a>
-  <ul class="dropdown-menu">
-    <li><a href="./portfolio/sites.html">Sites</a></li>
-    <li><a href="./portfolio/feeds.html">Feeds do Instagram</a></li>
-    <li><a href="./portfolio/postagens.html">Pacotes de Postagens</a></li>
-    <li><a href="./portfolio/roteiros.html">Roteiros TikTok</a></li>
-    <li><a href="./portfolio/textos.html">Textos para Blogs e Sites</a></li>
-    <li><a href="./portfolio/identidades.html">Identidades Visuais</a></li>
-  </ul>
-</li>
-  <li><a href="servicos.html">Serviços</a></li>
-  <li><a href="contato.html">Contato</a></li>
-</ul>
-
-    </nav>
-  </div>
-</header>
-
-
-
-
-<!-- PASSO 2: Use o mesmo padding-top para os conteúdos principais -->
-<!-- EXEMPLO PARA INDEX -->
-<section class="hero" id="inicio">
-  <div class="overlay"></div>
-  <div class="hero-content">
-    <!-- conteúdo -->
-  </div>
-</section>
-
-<!-- PASSO 3: Certifique-se de que a navbar esteja fixa -->
-
-<!-- Hero Section -->
-<section class="hero" id="inicio">
-  <div class="overlay"></div>
-  <div class="hero-content" style="padding-top: 60px;"> 
-    <img src="https://res.cloudinary.com/dxjq122xi/image/upload/v1750374865/35d35afe-1cd6-461a-ad4b-d67e166e8b43_o46vyk.png" alt="Logo FN" class="logo-fn" />
-    <h1>a estética é a forma visível da alma</h1>
-    <!-- Frase removida como solicitado -->
-    <a href="#portfolio" class="btn-cta">Conheça meu trabalho</a>
-
-
-<div class="mockup-galeria">
-  <div class="linha linha-cima">
-    <div class="mockup ajustado esquerda">
-      <img src="https://res.cloudinary.com/dxjq122xi/image/upload/v1750380067/ChatGPT_Image_19_de_jun._de_2025_21_40_33_mzvc3k.png" alt="">
+  <!-- Header / Navbar -->
+  <header>
+    <div class="navbar-container">
+      <nav class="navbar">
+        <a href="index.html" class="logo">🪐</a>
+        <ul class="nav-links">
+          <li><a href="index.html#inicio">Início</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">Portfólio ▼</a>
+            <ul class="dropdown-menu">
+              <li><a href="portfolio/sites.html">Sites</a></li>
+              <li><a href="portfolio/feeds.html">Feeds do Instagram</a></li>
+              <li><a href="portfolio/postagens.html">Pacotes de Postagens</a></li>
+              <li><a href="portfolio/roteiros.html">Roteiros TikTok</a></li>
+              <li><a href="portfolio/textos.html">Textos para Blogs e Sites</a></li>
+              <li><a href="portfolio/identidades.html">Identidades Visuais</a></li>
+            </ul>
+          </li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
     </div>
-    <div class="mockup ajustado direita">
-      <img src="https://res.cloudinary.com/dxjq122xi/image/upload/v1750379649/ChatGPT_Image_19_de_jun._de_2025_21_32_19_gzcl43.png" alt="">
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="inicio">
+    <div class="overlay"></div>
+    <div class="hero-content" style="padding-top: 60px; text-align: center;">
+      <img src="https://res.cloudinary.com/dxjq122xi/image/upload/v1750374865/35d35afe-1cd6-461a-ad4b-d67e166e8b43_o46vyk.png" alt="Logo FN" class="logo-fn"/>
+      <h1>a estética é a forma visível da alma</h1>
+      <a href="#portfolio" class="btn-cta">Conheça meu trabalho</a>
     </div>
-  </div>
-  <div class="linha linha-baixo">
-    <div class="mockup ajustado direita">
-      <img src="https://res.cloudinary.com/dxjq122xi/image/upload/v1750383626/ChatGPT_Image_19_de_jun._de_2025_22_40_18_kgjjkn.png" alt="">
+  </section>
+
+  <!-- Portfolio Section -->
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <div class="portfolio-buttons-grid">
+        <a href="portfolio/sites.html"><span>Sites</span></a>
+        <a href="portfolio/feeds.html"><span>Feeds do Instagram</span></a>
+        <a href="portfolio/postagens.html"><span>Pacotes de Postagens</span></a>
+        <a href="portfolio/roteiros.html"><span>Roteiros TikTok</span></a>
+        <a href="portfolio/textos.html"><span>Textos para Blogs e Sites</span></a>
+        <a href="portfolio/identidades.html"><span>Identidades Visuais</span></a>
+      </div>
     </div>
-    <div class="mockup ajustado esquerda">
-      <img src="https://res.cloudinary.com/dxjq122xi/image/upload/v1750379661/ChatGPT_Image_19_de_jun._de_2025_21_34_12_accecd.png" alt="">
+  </section>
+
+  <!-- Services Section -->
+  <section class="servicos" id="servicos">
+    <div class="container teaser-servicos">
+      <h2 class="servico-poetico">Cada criação é única.</h2>
+      <p class="servico-frase">Mas se quiser saber o que posso fazer por você...</p>
+      <a href="servicos.html" class="btn-cta transparente">Ver serviços</a>
     </div>
-  </div>
-</div>
+  </section>
 
-  </div>
-</section>
-
-
-
-  </div>
-</section>
-
-<!-- Portfólio -->
-<section class="portfolio" id="portfolio">
-  <div class="container">
-    <div class="portfolio-buttons-grid">
-      <a href="./portfolio/sites.html"><span>Sites</span></a>
-      <a href="./portfolio/feeds.html"><span>Feeds do Instagram</span></a>
-      <a href="./portfolio/postagens.html"><span>Pacotes de Postagens</span></a>
-      <a href="./portfolio/roteiros.html"><span>Roteiros TikTok</span></a>
-      <a href="./portfolio/textos.html"><span>Textos para Blogs e Sites</span></a>
-      <a href="./portfolio/identidades.html"><span>Identidades Visuais</span></a>
+  <!-- Contact Section -->
+  <section class="contato" id="contato">
+    <div class="container">
+      <h2>Contato</h2>
+      <p>Me conta seu projeto. Eu te devolvo em forma.</p>
+      <a href="https://wa.me/5511939014504" target="_blank" class="btn-cta">Falar no WhatsApp</a>
+      <p class="final">Nos vemos onde forma e alma se encontram.</p>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- Footer -->
+  <footer>
+    <p>&copy; Forma Nexus — 2025</p>
+    <a href="https://instagram.com/aformanexus" target="_blank">Instagram</a>
+  </footer>
 
-<!-- Serviços -->
-<section class="servicos" id="servicos">
-  <div class="container teaser-servicos">
-    <h2 class="servico-poetico">Cada criação é única.</h2>
-    <p class="servico-frase">Mas se quiser saber o que posso fazer por você...</p>
-<a href="servicos.html" class="btn-cta transparente">Ver serviços</a>
-  </div>
-</section>
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script>
+    // Dropdown Portfolio
+    const dropdown = document.querySelector('.dropdown');
+    let hideTimeout;
+    dropdown.addEventListener('mouseenter', () => {
+      clearTimeout(hideTimeout);
+      dropdown.classList.add('open');
+    });
+    dropdown.addEventListener('mouseleave', () => {
+      hideTimeout = setTimeout(() => {
+        dropdown.classList.remove('open');
+      }, 400);
+    });
+    const toggle = dropdown.querySelector('.dropdown-toggle');
+    toggle.addEventListener('click', e => {
+      e.preventDefault();
+      dropdown.classList.toggle('open');
+    });
+    document.addEventListener('click', e => {
+      if (!dropdown.contains(e.target)) dropdown.classList.remove('open');
+    });
 
-
-<!-- Contato -->
-<section class="contato" id="contato">
-  <div class="container">
-    <h2>Contato</h2>
-    <p>Me conta seu projeto. Eu te devolvo em forma.</p>
-    <a href="https://wa.me/5511939014504" target="_blank" class="btn-cta">Falar no WhatsApp</a>
-    <p class="final">Nos vemos onde forma e alma se encontram.</p>
-  </div>
-</section>
-
-
-<footer>
-  <p>&copy; Forma Nexus — 2025</p>
-  <a href="https://instagram.com/aformanexus" target="_blank">Instagram</a>
-</footer>
-
-
-<script src="script.js"></script>
-<script>
-  // ------------------ SUBMENU PORTFÓLIO ------------------
-  const dropdown = document.querySelector('.dropdown');
-  let hideTimeout;
-
-  dropdown.addEventListener('mouseenter', () => {
-    clearTimeout(hideTimeout);
-    dropdown.classList.add('open');
-  });
-
-  dropdown.addEventListener('mouseleave', () => {
-    hideTimeout = setTimeout(() => {
-      dropdown.classList.remove('open');
-    }, 400);
-  });
-
-  const toggle = dropdown.querySelector('.dropdown-toggle');
-  toggle.addEventListener('click', (e) => {
-    e.preventDefault();
-    dropdown.classList.toggle('open');
-  });
-
-  document.addEventListener('click', (e) => {
-    if (!dropdown.contains(e.target)) {
-      dropdown.classList.remove('open');
-    }
-  });
-
-  // ------------------ NAVBAR ESCONDE AO ROLAR ------------------
-  let prevScroll = window.scrollY;
-  const navbar = document.querySelector('.navbar-container');
-
-  window.addEventListener('scroll', () => {
-    const currentScroll = window.scrollY;
-
-    if (currentScroll > prevScroll && currentScroll > 100) {
-      // Rolando pra baixo
-      navbar.classList.add('navbar-escondida');
-    } else {
-      // Rolando pra cima
-      navbar.classList.remove('navbar-escondida');
-    }
-
-    prevScroll = currentScroll;
-  });
-</script>
-
+    // Hide Navbar on scroll
+    let prevScroll = window.scrollY;
+    const headerEl = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+      const current = window.scrollY;
+      if (current > prevScroll && current > 100) headerEl.classList.add('oculto');
+      else headerEl.classList.remove('oculto');
+      prevScroll = current;
+    });
+  </script>
 </body>
 </html>
-

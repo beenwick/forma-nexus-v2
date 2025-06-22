@@ -1,64 +1,83 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfólio - Identidades Visuais | Forma Nexus</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <title>Feeds do Instagram | Forma Nexus</title>
+
   <link rel="stylesheet" href="../style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header>
-<nav class="navbar">
-  <a href="../index.html" class="logo">Forma Nexus</a>
-  <ul class="nav-links">
-    <li><a href="../index.html#inicio">Início</a></li>
-    <li class="dropdown">
-      <a href="../index.html#portfolio">Portfólio ▼</a>
-      <ul class="dropdown-menu">
-        <li><a href="sites.html">Sites</a></li>
-        <li><a href="feeds.html">Feeds do Instagram</a></li>
-        <li><a href="postagens.html">Pacotes de Postagens</a></li>
-        <li><a href="roteiros.html">Roteiros e Vídeos</a></li>
-        <li><a href="textos.html">Textos para Blogs e Sites</a></li>
-        <li><a href="identidades.html">Identidades Visuais</a></li>
+
+<header>
+  <div class="navbar-container">
+    <nav class="navbar">
+      <a href="../index.html" class="logo">🪐</a>
+      <ul class="nav-links">
+        <li><a href="../index.html#inicio">Início</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Portfólio ▼</a>
+          <ul class="dropdown-menu">
+            <li><a href="sites.html">Sites</a></li>
+            <li><a href="feeds.html">Feeds do Instagram</a></li>
+            <li><a href="postagens.html">Pacotes de Postagens</a></li>
+            <li><a href="roteiros.html">Roteiros TikTok</a></li>
+            <li><a href="textos.html">Textos para Blogs e Sites</a></li>
+            <li><a href="identidades.html">Identidades Visuais</a></li>
+          </ul>
+        </li>
+        <li><a href="../servicos.html">Serviços</a></li>
+        <li><a href="../contato.html">Contato</a></li>
       </ul>
-    </li>
-    <li><a href="../index.html#servicos">Serviços</a></li>
-    <li><a href="../index.html#contato">Contato</a></li>
-  </ul>
-</nav>
-  </header>
+    </nav>
+  </div>
+</header>
 
-  <main class="container portfolio">
-    <h1>Identidades Visuais</h1>
-    <p>Crio universos visuais que traduzem essência. Cada identidade nasce da escuta profunda, da energia que você emana e do símbolo que te representa. Paleta, tipografia, logo, manifesto: tudo com alma.</p>
-    
-    <div class="grid">
-      <div class="mockup">
-        <img src="https://via.placeholder.com/320x320?text=Logo+Mística" alt="Logo 1" />
-        <p>Logo para terapeuta holística — símbolo de transmutação com dourado e formas etéreas.</p>
-      </div>
-      <div class="mockup">
-        <img src="https://via.placeholder.com/320x320?text=Moodboard" alt="Moodboard" />
-        <p>Moodboard com elementos naturais e texturas cósmicas — guia visual da marca.</p>
-      </div>
-      <div class="mockup">
-        <img src="https://via.placeholder.com/320x320?text=Paleta+de+Cores" alt="Paleta" />
-        <p>Paleta personalizada com significados emocionais e espirituais.</p>
-      </div>
-      <div class="mockup">
-        <img src="https://via.placeholder.com/320x320?text=Manual+Visual" alt="Manual" />
-        <p>Mini-manual de identidade — uso da logo, fontes e elementos gráficos com intenção.</p>
-      </div>
-    </div>
+<!-- 👇 Aqui começa o conteúdo principal da página -->
+<main style="padding: 200px 20px 80px; text-align: center;">
+  <h1 style="color: var(--dourado-fosco); font-family: 'Playfair Display', serif;">
+    Título da Página
+  </h1>
+  <p style="color: var(--branco-leitoso); margin-top: 12px;">
+    Subtítulo ou descrição introdutória aqui.
+  </p>
+</main>
 
-    <a href="../index.html#contato" class="btn-cta">Quero algo assim</a>
-  </main>
+<footer>
+  <p>&copy; Forma Nexus — 2025</p>
+  <a href="https://instagram.com/aformanexus" target="_blank">Instagram</a>
+</footer>
 
-  <footer>
-    <p>&copy; Forma Nexus — 2025</p>
-    <a href="https://instagram.com/nexus4stral" target="_blank" rel="noopener noreferrer">Instagram</a>
-  </footer>
+<script src="../script.js"></script>
+<script>
+  const dropdown = document.querySelector('.dropdown');
+  let hideTimeout;
+
+  dropdown.addEventListener('mouseenter', () => {
+    clearTimeout(hideTimeout);
+    dropdown.classList.add('open');
+  });
+
+  dropdown.addEventListener('mouseleave', () => {
+    hideTimeout = setTimeout(() => {
+      dropdown.classList.remove('open');
+    }, 400);
+  });
+
+  const toggle = dropdown.querySelector('.dropdown-toggle');
+  toggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    dropdown.classList.toggle('open');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!dropdown.contains(e.target)) {
+      dropdown.classList.remove('open');
+    }
+  });
+</script>
+
 </body>
 </html>

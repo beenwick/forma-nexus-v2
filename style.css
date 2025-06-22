@@ -1303,3 +1303,9 @@ footer a {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Oculta o header ao rolar para baixo */
+header.oculto {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}

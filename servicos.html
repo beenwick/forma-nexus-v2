@@ -20,7 +20,7 @@
         <ul class="nav-links">
           <li><a href="index.html#inicio">Início</a></li>
           <li class="dropdown">
-  <a href="#">Portfólio ▼</a>
+<a href="#" class="dropdown-toggle">Portfólio ▼</a>
   <ul class="dropdown-menu">
     <li><a href="./portfolio/sites.html">Sites</a></li>
     <li><a href="./portfolio/feeds.html">Feeds do Instagram</a></li>
@@ -140,3 +140,32 @@
 </footer>
 <script src="script.js"></script>
 </html>
+
+<script>
+  const dropdown = document.querySelector('.dropdown');
+  let hideTimeout;
+
+  dropdown.addEventListener('mouseenter', () => {
+    clearTimeout(hideTimeout);
+    dropdown.classList.add('open');
+  });
+
+  dropdown.addEventListener('mouseleave', () => {
+    hideTimeout = setTimeout(() => {
+      dropdown.classList.remove('open');
+    }, 400);
+  });
+
+  const toggle = dropdown.querySelector('.dropdown-toggle');
+  toggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    dropdown.classList.toggle('open');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!dropdown.contains(e.target)) {
+      dropdown.classList.remove('open');
+    }
+  });
+</script>
+
