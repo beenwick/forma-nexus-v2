@@ -1,12 +1,13 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Forma Nexus</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css"/>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Forma Nexus</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&amp;family=Poppins:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<style>
     /* Dropdown Styles */
     .dropdown { position: relative; }
     .dropdown-menu {
@@ -39,85 +40,164 @@
     /* Hide navbar on scroll */
     header.oculto { transform: translateY(-100%); transition: transform 0.3s ease; }
   </style>
+<style>
+    /* Ajuste apenas os botões da grade do portfólio */
+    .portfolio-buttons-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+      align-items: center;
+      margin: 40px 0;
+    }
+    .portfolio-buttons-grid a {
+      display: inline-block;
+      padding: 18px 30px;
+      border: 2px solid #c5a253;
+      border-radius: 12px;
+      background: rgba(0,0,0,0.44);
+      color: #fff;
+      font-weight: 500;
+      font-size: 1.06rem;
+      text-align: center;
+      text-decoration: none;
+      white-space: nowrap;
+      width: auto;
+      min-width: 185px;
+      transition: border 0.2s, box-shadow 0.2s;
+    }
+    .portfolio-buttons-grid a:hover {
+      border-color: #ffeeba;
+      box-shadow: 0 2px 16px 0 #0003;
+      background: rgba(0,0,0,0.72);
+      color: #ffd477;
+    }
+  </style>
+
+<style>
+  .portfolio-buttons-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 40px;
+    max-width: 800px;
+    margin: 60px auto;
+  }
+  .portfolio-buttons-grid a {
+    width: 260px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #c5a253;
+    border-radius: 12px;
+    background: rgba(0,0,0,0.44);
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.06rem;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: border 0.2s, box-shadow 0.2s;
+  }
+  .portfolio-buttons-grid a:hover {
+    border-color: #ffeeba;
+    box-shadow: 0 2px 16px 0 #0003;
+    background: rgba(0,0,0,0.72);
+    color: #ffd477;
+  }
+</style>
 </head>
 <body>
-  <!-- Header / Navbar -->
-  <header>
-    <div class="navbar-container">
-      <nav class="navbar">
-        <a href="index.html" class="logo">🪐</a>
-        <ul class="nav-links">
-          <li><a href="index.html#inicio">Início</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle">Portfólio ▼</a>
-            <ul class="dropdown-menu">
-              <li><a href="portfolio/sites.html">Sites</a></li>
-              <li><a href="portfolio/feeds.html">Feeds do Instagram</a></li>
-              <li><a href="portfolio/postagens.html">Pacotes de Postagens</a></li>
-              <li><a href="portfolio/roteiros.html">Roteiros TikTok</a></li>
-              <li><a href="portfolio/textos.html">Textos para Blogs e Sites</a></li>
-              <li><a href="portfolio/identidades.html">Identidades Visuais</a></li>
-            </ul>
-          </li>
-          <li><a href="servicos.html">Serviços</a></li>
-          <li><a href="contato.html">Contato</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero" id="inicio">
-    <div class="overlay"></div>
-    <div class="hero-content" style="padding-top: 60px; text-align: center;">
-      <img src="https://res.cloudinary.com/dxjq122xi/image/upload/v1750374865/35d35afe-1cd6-461a-ad4b-d67e166e8b43_o46vyk.png" alt="Logo FN" class="logo-fn"/>
-      <h1>a estética é a forma visível da alma</h1>
-      <a href="#portfolio" class="btn-cta">Conheça meu trabalho</a>
-    </div>
-  </section>
-
-  <!-- Portfolio Section -->
-  <section class="portfolio" id="portfolio">
-    <div class="container">
-      <div class="portfolio-buttons-grid">
-        <a href="portfolio/sites.html"><span>Sites</span></a>
-        <a href="portfolio/feeds.html"><span>Feeds do Instagram</span></a>
-        <a href="portfolio/postagens.html"><span>Pacotes de Postagens</span></a>
-        <a href="portfolio/roteiros.html"><span>Roteiros TikTok</span></a>
-        <a href="portfolio/textos.html"><span>Textos para Blogs e Sites</span></a>
-        <a href="portfolio/identidades.html"><span>Identidades Visuais</span></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section class="servicos" id="servicos">
-    <div class="container teaser-servicos">
-      <h2 class="servico-poetico">Cada criação é única.</h2>
-      <p class="servico-frase">Mas se quiser saber o que posso fazer por você...</p>
-      <a href="servicos.html" class="btn-cta transparente">Ver serviços</a>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="contato" id="contato">
-    <div class="container">
-      <h2>Contato</h2>
-      <p>Me conta seu projeto. Eu te devolvo em forma.</p>
-      <a href="https://wa.me/5511939014504" target="_blank" class="btn-cta">Falar no WhatsApp</a>
-      <p class="final">Nos vemos onde forma e alma se encontram.</p>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; Forma Nexus — 2025</p>
-    <a href="https://instagram.com/aformanexus" target="_blank">Instagram</a>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="script.js"></script>
-  <script>
+<!-- Header / Navbar -->
+<header>
+<div class="navbar-container">
+<nav class="navbar">
+<a class="logo" href="index.html">🪐</a>
+<ul class="nav-links">
+<li><a href="index.html#inicio">Início</a></li>
+<li class="dropdown">
+<a class="dropdown-toggle" href="#">Portfólio ▼</a>
+<ul class="dropdown-menu">
+<li><a href="portfolio/sites.html">Sites</a></li>
+<li><a href="portfolio/feeds.html">Feeds do Instagram</a></li>
+<li><a href="portfolio/postagens.html">Pacotes de Postagens</a></li>
+<li><a href="portfolio/roteiros.html">Roteiros TikTok</a></li>
+<li><a href="portfolio/textos.html">Textos para Blogs e Sites</a></li>
+<li><a href="portfolio/identidades.html">Identidades Visuais</a></li>
+</ul>
+</li>
+<li><a href="servicos.html">Serviços</a></li>
+<li><a href="contato.html">Contato</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="hero" id="inicio">
+<div class="overlay"></div>
+<div class="hero-content" style="padding-top: 60px; text-align: center;">
+<img alt="Logo FN" class="logo-fn" src="https://res.cloudinary.com/dxjq122xi/image/upload/v1750374865/35d35afe-1cd6-461a-ad4b-d67e166e8b43_o46vyk.png"/>
+<h1>a estética é a forma visível da alma</h1>
+<a class="btn-cta" href="#portfolio">Conheça meu trabalho</a>
+<div class="mockup-galeria">
+<div class="linha linha-cima">
+<div class="mockup ajustado esquerda">
+<img alt="" src="https://res.cloudinary.com/dxjq122xi/image/upload/v1750380067/ChatGPT_Image_19_de_jun._de_2025_21_40_33_mzvc3k.png"/>
+</div>
+<div class="mockup ajustado direita">
+<img alt="" src="https://res.cloudinary.com/dxjq122xi/image/upload/v1750379649/ChatGPT_Image_19_de_jun._de_2025_21_32_19_gzcl43.png"/>
+</div>
+</div>
+<div class="linha linha-baixo">
+<div class="mockup ajustado direita">
+<img alt="" src="https://res.cloudinary.com/dxjq122xi/image/upload/v1750383626/ChatGPT_Image_19_de_jun._de_2025_22_40_18_kgjjkn.png"/>
+</div>
+<div class="mockup ajustado esquerda">
+<img alt="" src="https://res.cloudinary.com/dxjq122xi/image/upload/v1750379661/ChatGPT_Image_19_de_jun._de_2025_21_34_12_accecd.png"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Section -->
+<section class="portfolio" id="portfolio">
+<div class="container">
+<div class="portfolio-buttons-grid">
+<a href="portfolio/sites.html"><span>Sites</span></a>
+<a href="portfolio/feeds.html"><span>Feeds do Instagram</span></a>
+<a href="portfolio/postagens.html"><span>Pacotes de Postagens</span></a>
+<a href="portfolio/roteiros.html"><span>Roteiros TikTok</span></a>
+<a href="portfolio/textos.html"><span>Textos para Blogs e Sites</span></a>
+<a href="portfolio/identidades.html"><span>Identidades Visuais</span></a>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="servicos" id="servicos">
+<div class="container teaser-servicos">
+<h2 class="servico-poetico">Cada criação é única.</h2>
+<p class="servico-frase">Mas se quiser saber o que posso fazer por você...</p>
+<a class="btn-cta transparente" href="servicos.html">Ver serviços</a>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="contato" id="contato">
+<div class="container">
+<h2>Contato</h2>
+<p>Me conta seu projeto. Eu te devolvo em forma.</p>
+<a class="btn-cta" href="https://wa.me/5511939014504" target="_blank">Falar no WhatsApp</a>
+<p class="final">Nos vemos onde forma e alma se encontram.</p>
+</div>
+</section>
+<!-- Footer -->
+<footer>
+<p>© Forma Nexus — 2025</p>
+<a href="https://instagram.com/aformanexus" target="_blank">Instagram</a>
+</footer>
+<!-- Scripts -->
+<script src="script.js"></script>
+<script>
     // Dropdown Portfolio
     const dropdown = document.querySelector('.dropdown');
     let hideTimeout;
