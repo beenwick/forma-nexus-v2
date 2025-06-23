@@ -8,6 +8,41 @@
 <title>Feeds do Instagram | Forma Nexus</title>
 <link href="../style.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&amp;family=Poppins:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<style>
+.balao-guia {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 10, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.conteudo-balao {
+  background: #1e1e1e;
+  color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+}
+
+.fechar-balao {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #ccc;
+}
+</style>
 </head>
 <body>
 <header>
@@ -35,87 +70,82 @@
 </header>
 <!-- 👇 Aqui começa o conteúdo principal da página -->
 <main style="padding: 200px 20px 80px; text-align: center;">
-<h1 style="color: var(--dourado-fosco); font-family: 'Playfair Display', serif;">
-    Título da Página
-  </h1>
-<p style="color: var(--branco-leitoso); margin-top: 12px;">
-    Subtítulo ou descrição introdutória aqui.
-  </p>
+<h1 style="color: var(--dourado-fosco); font-family: 'Playfair Display', serif;">Escrevemos para encantar, vender e transformar</h1>
+<p style="color: var(--branco-leitoso); margin-top: 12px;">Seis tipos de textos profissionais, com alma, estratégia e propósito.</p>
 <section class="portfolio-copy">
 <div class="container">
-<h2 class="titulo-copy">Exemplos de Textos Profissionais</h2>
-<p class="subtitulo-copy">Criações para nichos e objetivos diversos, com o tom certo para cada situação.</p>
+
+
 <div class="grid-copy">
 <div class="card-copy">
-<h3>Landing Page de Captura</h3>
-<span class="nicho">🧠 Desenvolvimento Pessoal • Tom Inspirador</span>
-<div class="texto-copy">
-<p><strong>Transforme Ansiedade em Clareza com Apenas 5 Minutos por Dia</strong></p>
-<p>Baixe agora o guia gratuito que já ajudou mais de 12 mil pessoas a reconectarem com sua essência através de técnicas simples e científicas.</p>
-<ul>
-<li>Método 100% gratuito</li>
-<li>Prático e direto: aplique ainda hoje</li>
-<li>Criado por terapeutas com base em neurociência</li>
-</ul>
-<button>📩 Receber o Guia</button>
-</div>
-</div>
-<div class="card-copy">
-<h3>Anúncio para Instagram</h3>
-<span class="nicho">🌿 Cosméticos Veganos • Tom Jovem</span>
-<div class="texto-copy">
-<p><strong>✨ Brechó? Não. Tesouro escondido.</strong></p>
-<p>Coleções únicas, peças com história e estilo com propósito.</p>
-<p>Frete grátis nas compras acima de R$150</p>
-<p>👗 Peças selecionadas e em perfeito estado</p>
-<p>📦 Envio para todo o Brasil</p>
-</div>
-</div>
-<div class="card-copy">
-<h3>Bio de Instagram Profissional</h3>
-<span class="nicho">🥗 Nutrição Funcional • Tom Técnico &amp; Acolhedor</span>
-<div class="texto-copy">
-<p>🧠 Psicóloga | CRP 06/123456</p>
-<p>Ajudo adultos a lidar com ansiedade e autoestima</p>
-<p>📍Atendimentos online e presenciais | SP</p>
-<p>💬 Agende pelo link na bio</p>
-</div>
-</div>
-<div class="card-copy">
-<h3>Apresentação de Produto</h3>
-<span class="nicho">🕯️ Produtos Artesanais • Tom Sensorial</span>
-<div class="texto-copy">
-<p><strong>Relaxe, solte e entregue-se ao presente.</strong></p>
-<p>O Kit Noite Serena traz 3 velas aromáticas feitas à mão com óleos essenciais de lavanda, camomila e sálvia branca.</p>
-<ul>
-<li>100% vegetal | Cera de coco e pavio de algodão</li>
-<li>Ideal para meditação e rituais de sono</li>
-</ul>
-</div>
-</div>
+<h3>Copy para Sites</h3>
 
-<div class="card-copy">
-<h3>E-mail Marketing</h3>
-<span class="nicho">💼 Finanças Pessoais • Tom Direto</span>
-<div class="texto-copy">
-<p><strong>Você está deixando dinheiro na mesa (sem saber)</strong></p>
-<p>Descubra onde você pode estar perdendo oportunidades de investimento. Nosso relatório gratuito revela os 5 erros mais comuns cometidos por iniciantes.</p>
-<button>📊 Baixar Relatório</button>
-</div>
+<div class="texto-copy"><p>Criamos textos para sites institucionais que contam sua história, explicam seus serviços e conectam com seu público de forma estratégica. Cada palavra é pensada para reforçar sua autoridade e facilitar a jornada do visitante. </p><button>📄 Ver Detalhes</button></div>
 </div>
 <div class="card-copy">
-<h3>Roteiro de Vídeo Curto</h3>
-<span class="nicho">📱 Marca Pessoal • Tom Assertivo</span>
-<div class="texto-copy">
-<p><strong>Hook:</strong> “Você está vendendo errado no Instagram.”</p>
-<p><strong>Problema:</strong> Seu perfil parece uma vitrine, não conversa com ninguém.</p>
-<p><strong>Solução:</strong> 3 ajustes simples para transformar seguidores em clientes.</p>
-<p><strong>Fechamento:</strong> Salva esse vídeo e aplica agora.</p>
+<h3>Textos para Blog</h3>
+
+<div class="texto-copy"><p>Desenvolvemos artigos otimizados para SEO com títulos atraentes, leitura fluida e profundidade de conteúdo. Nossos textos aumentam sua presença no Google e educam seu público, gerando valor e autoridade para sua marca ou projeto.</p><button>📰 Ver Detalhes</button></div>
+</div>
+<div class="card-copy">
+<h3>Roteiros para Vídeos</h3>
+
+<div class="texto-copy"><p>Transformamos ideias em roteiros envolventes para vídeos de YouTube, TikTok, Reels e institucionais. Entregamos estrutura clara, gatilhos narrativos e linguagem adequada ao seu público, elevando o impacto da sua comunicação audiovisual.</p><button>🎬 Ver Detalhes</button></div>
+</div>
+<div class="card-copy">
+<h3>Copy para Anúncios</h3>
+
+<div class="texto-copy"><p>Escrevemos anúncios persuasivos com foco em conversão, seja para Instagram, Facebook, Google ou outros canais. Frases diretas, criativas e com linguagem que ativa emoções e leva o leitor à ação de forma natural e eficiente.</p><button>🚀 Ver Detalhes</button></div>
+</div>
+<div class="card-copy">
+<h3>Roteiros de Podcast</h3>
+
+<div class="texto-copy"><p>Criamos roteiros personalizados para podcasts e narrativas em áudio, com introdução envolvente, condução clara e final memorável. Ideal para quem deseja impactar com conteúdo profundo, reflexivo ou inspirador em formato falado.</p><button>🎧 Ver Detalhes</button></div>
+</div>
+<div class="card-copy">
+<h3>Redação Acadêmica</h3>
+
+<div class="texto-copy"><p>Apoiamos você na criação ou revisão de textos acadêmicos como TCCs, artigos e relatórios. Garantimos clareza argumentativa, coesão textual, norma culta e organização lógica, respeitando sempre o estilo e as diretrizes solicitadas.</p><button>📚 Ver Detalhes</button></div>
 </div>
 </div>
 </div>
+</section>
+<div class="balao-guia" id="guia-balao" style="display: none;">
+<div class="conteudo-balao">
+<span class="fechar-balao" onclick="fecharBalao()">✖</span>
+<p>
+      Este guia foi desenvolvido para ajudar você a reencontrar o equilíbrio mental em meio à rotina acelerada.  
+      São práticas simples, respaldadas pela neurociência, que cabem no seu dia.  
+      Ao seguir esse material por 7 dias, você aprenderá a desacelerar a mente, resgatar a respiração consciente,  
+      identificar os gatilhos da ansiedade e criar rituais de bem-estar.  
+      Tudo isso em menos de 5 minutos por dia.  
+      <br/><br/>
+      O conteúdo inclui exercícios guiados, afirmações, áudios meditativos e instruções práticas para aplicar desde o primeiro momento.  
+      É uma oportunidade de reconexão interna, ideal para quem busca mais leveza, foco e clareza de propósito.  
+      <br/><br/>
+      Clique no botão abaixo para receber diretamente no seu e-mail ou salve para usar no seu ritmo.
+    </p>
 </div>
-</section></main>
+</div>
+<div class="balao-guia" id="relatorio-balao" style="display: none;">
+<div class="conteudo-balao">
+<span class="fechar-balao" onclick="fecharBalaoRelatorio()">✖</span>
+<p>
+      Nosso relatório gratuito foi elaborado por especialistas em finanças pessoais e revela os 5 erros mais comuns cometidos por quem está começando a investir.
+      <br/><br/>
+      Com uma linguagem acessível e direta, você vai entender:
+      <br/><br/>
+      • Por que guardar dinheiro na poupança pode estar te fazendo perder poder de compra. <br/>
+      • Como pequenas taxas escondidas corroem seu rendimento ao longo dos anos. <br/>
+      • O erro clássico de diversificação que pode colocar tudo a perder. <br/>
+      • Como identificar uma armadilha financeira antes que seja tarde. <br/>
+      • E o mais importante: o que fazer de forma simples para corrigir cada um desses pontos.
+      <br/><br/>
+      Um conteúdo essencial para quem quer tomar decisões mais conscientes e seguras com seu dinheiro.
+    </p>
+</div>
+</div>
+</main>
 <footer>
 <p>© Forma Nexus — 2025</p>
 <a href="https://instagram.com/aformanexus" target="_blank">Instagram</a>
@@ -145,6 +175,48 @@
   document.addEventListener('click', (e) => {
     if (!dropdown.contains(e.target)) {
       dropdown.classList.remove('open');
+    }
+  });
+</script>
+<script>
+  const balao = document.getElementById('guia-balao');
+
+  document.querySelectorAll('button').forEach(btn => {
+    if (btn.textContent.includes('Receber o Guia')) {
+      btn.addEventListener('click', () => {
+        balao.style.display = 'flex';
+      });
+    }
+  });
+
+  function fecharBalao() {
+    balao.style.display = 'none';
+  }
+
+  window.addEventListener('click', function(event) {
+    if (event.target === balao) {
+      fecharBalao();
+    }
+  });
+</script>
+<script>
+  const relatorioBalao = document.getElementById('relatorio-balao');
+
+  document.querySelectorAll('button').forEach(btn => {
+    if (btn.textContent.includes('Baixar Relatório')) {
+      btn.addEventListener('click', () => {
+        relatorioBalao.style.display = 'flex';
+      });
+    }
+  });
+
+  function fecharBalaoRelatorio() {
+    relatorioBalao.style.display = 'none';
+  }
+
+  window.addEventListener('click', function(event) {
+    if (event.target === relatorioBalao) {
+      fecharBalaoRelatorio();
     }
   });
 </script>
